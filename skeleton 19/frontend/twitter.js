@@ -4,5 +4,8 @@ const FollowToggle = require('./follow_toggle');
 // button.follow-toggle element
 
 $(function () {
-  $('button.follow-toggle').each( (i, btn) => new FollowToggle(btn) );
+  $('nav.users-search').each( (i, nav) => new UsersSearch(nav) );
+
+
+  $('button.follow-toggle').each( (i, btn) => new FollowToggle(btn, {}) );
 });
