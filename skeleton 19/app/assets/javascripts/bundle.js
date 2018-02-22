@@ -258,10 +258,18 @@ class TweetCompose {
       this.submit(event)
     });
 
+    this.$input = this.$el.find('.chars-left');
     this.$textarea = this.$el.find('textarea[name=tweet\\[content\\]]');
-    // this.$textarea = this.$el.find('textarea');
+    this.$el.on('input', (event) => {
+      this.inputHandler(event)
+    });
+  }
 
-    // console.log(this.$textarea);
+  inputHandler (event) {
+    event.preventDefault();
+    const inputLength = this.$textarea.val().length;
+
+    this.$input.text(`${140 - inputLength} characters left`);
   }
 
   submit (event) {
