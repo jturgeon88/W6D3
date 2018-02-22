@@ -12,14 +12,24 @@ const APIUtil = {
     })
   ),
 
-  searchUsers: (queryVal) => (
+  //I believe this returns an array of users
+  searchUsers: (query) => (
     $.ajax({
       url: '/users/search',
       dataType: 'json',
       method: 'GET',
-      data: { queryVal }
+      data: { query }
     })
-  )
+  ),
+
+  createTweet: (data) => {
+    return $.ajax ({
+      url: "/tweets",
+      method: "POST",
+      dataType: "json",
+      data
+    });
+  }
 };
 
 module.exports = APIUtil;

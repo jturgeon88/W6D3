@@ -1,0 +1,43 @@
+header {
+  background-color: white;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-width: 600px;
+  max-width: 1000px;
+  width: 100%;
+  height: 60px;
+
+  background-color: white;
+
+  .header-links {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #eee;
+    display: flex;
+    
+    li {
+      display: flex;
+      height: 100%;
+
+
+      a, input[type="submit"] {
+        height: calc(100% - 40px);
+        padding: 20px;
+        color: rgb(101, 119, 134);
+        background-color: white;
+      }
+    }
+  }
+  
+}
+
